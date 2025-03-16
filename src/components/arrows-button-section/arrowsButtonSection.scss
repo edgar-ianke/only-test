@@ -1,0 +1,47 @@
+$arrow-gray-icon: "data:image/svg+xml,%3Csvg width='10' height='14' viewBox='0 0 10 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.49988 0.750001L2.24988 7L8.49988 13.25' stroke='%2342567A' stroke-width='2'/%3E%3C/svg%3E%0A";
+$arrow-gray-icon_mobile: "data:image/svg+xml,%3Csvg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.7489 1.04178L1.6239 4.16678L4.7489 7.29178' stroke='%2342567A' stroke-width='2'/%3E%3C/svg%3E%0A";
+.arrows {
+  width: fit-content;
+  position: relative;
+  z-index: 8;
+  padding-left: clamp(20px, 5vw, 80px);
+  &__button-section {
+    display: flex;
+    gap: 20px;
+  }
+  &__button {
+    background-image: url($arrow-gray-icon);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border: 1px solid rgba(66, 86, 122, 0.5);
+    border-radius: 50%;
+    &:disabled {
+      opacity: 0.5;
+    }
+    &_next {
+      transform: rotate(180deg);
+    }
+  }
+  &__counter {
+    text-align: left;
+    font-size: 14px;
+    color: #42567a;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .arrows {
+    margin-top: -56px;
+    &__button-section {
+      gap: 8px;
+    }
+    &__counter {
+      padding-bottom: 8px;
+    }
+    &__button {
+      padding: 12px;
+      background-image: url($arrow-gray-icon_mobile);
+    }
+  }
+}

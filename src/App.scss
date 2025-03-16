@@ -1,0 +1,13 @@
+.main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 110px;
+  position: relative;
+  border-left: 1px solid rgba(66, 86, 122, 0.1);
+  border-right: 1px solid rgba(66, 86, 122, 0.1);
+}
+@media screen and (max-width: 768px) {
+  .main {
+    padding-top: 59px;
+  }
+}
